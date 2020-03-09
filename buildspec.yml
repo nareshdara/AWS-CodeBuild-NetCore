@@ -14,6 +14,8 @@ phases:
     commands:
       - echo Build started on `date`
       - sonar-scanner
+      - chmod 777 run-sonar.sh
+      - ./run-sonar.sh
       - dotnet publish -c release -o ./build_output SampleCore.csproj
 artifacts:
   files:
